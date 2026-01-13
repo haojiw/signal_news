@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -85,40 +85,41 @@
     font-weight: 400;
   }
 
+  /* Tightened typography for technical feel */
   h1 {
     font-size: 1.125rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    line-height: 1.3;
+    line-height: 1.2;
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 0.1rem;
     font-weight: 500;
-    letter-spacing: 0.05em;
-    line-height: 1.4;
+    letter-spacing: 0.04em;
+    line-height: 1.25;
   }
 
   h3 {
     font-size: 0.875rem;
     font-weight: 400;
     letter-spacing: 0.02em;
-    line-height: 1.5;
+    line-height: 1.35;
   }
 
   h4 {
-    font-size: 0.6875rem;
-    font-weight: 500;
+    font-size: 0.75rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    line-height: 1.3;
+    letter-spacing: 0.14em;
+    line-height: 1.2;
   }
 
   p {
     font-size: 0.875rem;
     font-weight: 300;
     letter-spacing: 0.01em;
-    line-height: 1.7;
+    line-height: 1.5;
   }
 }

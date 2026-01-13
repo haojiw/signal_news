@@ -12,14 +12,12 @@ interface NewsFeedProps {
 export function NewsFeed({ signals, timeSlot, onSignalClick }: NewsFeedProps) {
   return (
     <div>
-      {/* Minimal header */}
-      <div className="mb-16 text-center">
-        <h4 className="font-mono text-muted-foreground">
-          {timeSlot} DROP
-        </h4>
+      {/* Header */}
+      <div className="mb-10 text-center">
+        <h4 className="font-mono text-muted-foreground">{timeSlot} DROP</h4>
       </div>
-      
-      {/* News Items - maximum whitespace */}
+
+      {/* News Items */}
       <div>
         {signals.map((signal) => (
           <NewsItem
