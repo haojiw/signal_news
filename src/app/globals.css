@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* Signal News Theme - Dark Mode Default */
+:root {
+  --background: #000000;
+  --foreground: #EAEAEA;
+  --signal-up: #00FF41;
+  --signal-down: #FF3131;
+  --accent: #666666;
+  --divider: #333333;
+  --card-bg: #0A0A0A;
+  --hover-bg: #111111;
+}
+
+/* Light Mode */
+.light {
+  --background: #F5F5F0;
+  --foreground: #0A0A0A;
+  --signal-up: #00A82B;
+  --signal-down: #CC0000;
+  --accent: #888888;
+  --divider: #CCCCCC;
+  --card-bg: #FFFFFF;
+  --hover-bg: #EEEEEE;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-signal-up: var(--signal-up);
+  --color-signal-down: var(--signal-down);
+  --color-accent: var(--accent);
+  --color-divider: var(--divider);
+  --color-card-bg: var(--card-bg);
+  --color-hover-bg: var(--hover-bg);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility classes */
+.font-mono {
+  font-family: var(--font-mono), 'IBM Plex Mono', monospace;
+}
+
+/* Custom scrollbar for dark mode */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+}
+
+/* Page transitions */
+.page-transition {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Chart styling */
+.chart-glow {
+  filter: drop-shadow(0 0 8px var(--signal-up));
+}
+
+/* Selection styling */
+::selection {
+  background: var(--signal-up);
+  color: var(--background);
+}
